@@ -25,6 +25,7 @@ jobs:
 
       - name: Deploy built files to root
         run: |
+          find . -type f -not -name '.git*' -not -name 'README.md' -exec rm -f {} +
           cp -R dist/* .
           rm -rf dist
           git config user.name "GitHub Actions"

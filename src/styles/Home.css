@@ -1,0 +1,183 @@
+.home {
+  padding: 2rem 0;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.section:nth-child(1) {
+  flex-direction: row;
+}
+
+.section:nth-child(2) {
+  flex-direction: row;
+}
+
+.section:nth-child(3) {
+  flex-direction: row;
+}
+
+.content-left, .content-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(42, 26, 58, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(42, 26, 58, 0.8);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #2a1a3a;
+  border-radius: 2px;
+}
+
+.summary {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+/* Experience Section Styles */
+.highlights {
+  list-style: none;
+}
+
+.highlights li {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #e0e0e0;
+}
+
+.highlights li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+}
+
+/* Tech Stack Section Styles */
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tech-category {
+  background: rgba(42, 26, 58, 0.3);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tech-category:hover {
+  transform: translateY(-5px);
+  background: rgba(42, 26, 58, 0.5);
+}
+
+.tech-category h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.tech-category p {
+  color: #e0e0e0;
+}
+
+/* Contact Section Styles */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  background: rgba(42, 26, 58, 0.3);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  background: rgba(42, 26, 58, 0.5);
+}
+
+.contact-item h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.contact-item p {
+  color: #e0e0e0;
+}
+
+.contact-item p a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover p a {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .section:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .content-left, .content-right {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .tech-categories, .contact-info {
+    grid-template-columns: 1fr;
+  }
+} 

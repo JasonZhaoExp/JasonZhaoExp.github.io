@@ -1,0 +1,39 @@
+/* Styles for Footer */
+.footer {
+  margin-top: auto;
+  background: black;
+  padding: 2rem 0;
+  color: white;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #3a2a4a;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

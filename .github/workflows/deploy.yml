@@ -30,6 +30,6 @@ jobs:
         git init
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add dist/*
+        git add -f dist/*
         git commit -m "Deploy to GitHub Pages"
         git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:main

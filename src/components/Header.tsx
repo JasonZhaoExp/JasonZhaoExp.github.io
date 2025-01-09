@@ -7,7 +7,6 @@ const Header: React.FC = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    // Prevent scrolling when menu is open
     document.body.style.overflow = isMobileMenuOpen ? 'auto' : 'hidden';
   };
 
